@@ -6,11 +6,15 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   </head>
   <body>
+    <div class="nav-bar"></div>
     <div id="app">
-      <h1>Product goes here</h1>
+      <div class="cart">
+        <p>Cart({{cart.length}})</p>
+      </div>
+      <product :premium="premium" @add-to-cart="updateCart"></product>
     </div>
 
     <!-- Import Js -->
